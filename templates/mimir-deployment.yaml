@@ -34,11 +34,19 @@ spec:
             - containerPort: 9009
           resources: {}
           volumeMounts:
-            - mountPath: /etc/mimir.yaml
-              name: mimir-claim0
+            - name: mimir-conf
+              mountPath: /etc/mimir.yaml
+              subPath: mimir.yaml
+            - name: mimir-claim0
       restartPolicy: Always
       volumes:
         - name: mimir-claim0
           persistentVolumeClaim:
             claimName: mimir-claim0
+        - name: mimir-conf
+          configMap:
+            name: mimir-config-file
+            items:
+            - key: mimir.yaml
+              path: mimir.yaml
 status: {}
