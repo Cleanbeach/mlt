@@ -11,8 +11,8 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      io.kompose.service: loki
+    # matchLabels:
+    #   io.kompose.service: loki
   strategy: {}
   template:
     metadata:
