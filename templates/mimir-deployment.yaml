@@ -37,7 +37,7 @@ spec:
             - name: mimir-conf
               mountPath: /etc/mimir.yaml
               subPath: mimir.yaml
-            - name: mimir-claim0
+            # - name: mimir-claim0
       restartPolicy: Always
       volumes:
         - name: mimir-claim0
