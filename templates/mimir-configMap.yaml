@@ -1,10 +1,10 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: mimir-conf-file
-  lables: 
-    app: mimir
-data:
-  mimir.yaml: |- 
-    {{ .Files.Get "mimir/mimir.yaml" | indent 4 }} 
-   #{{ (.Files.Glob "mimir/mimir.yaml").AsConfig | indent 2 }}
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: mimir-conf-file
+#   lables: 
+#     app: mimir
+# data:
+#   mimir.yaml: |- 
+#     {{ .Files.Get "mimir/mimir.yaml" | indent 4 }} 
+#    #{{ (.Files.Glob "mimir/mimir.yaml").AsConfig | indent 2 }}
