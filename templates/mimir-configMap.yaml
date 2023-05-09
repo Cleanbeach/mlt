@@ -6,5 +6,5 @@ metadata:
     app: mimir
 data:
   mimir.yaml: |- 
-    {{ .Files.Get "mimir/mimir.yaml" | indent 4 }} 
+    {{ .Files.Get "mimir/mimir.yaml" | indent 2 }} 
    #{{ (.Files.Glob "mimir/mimir.yaml").AsConfig | indent 2 }}
