@@ -1,0 +1,12 @@
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: grfana-conf-file
+#   lables: 
+#     app: grfana
+# data:
+#   datasources.yaml: |- 
+#     {{ .Files.Get "grafana/provisioning/datasources/datasources.yaml" | indent 4 }}
+#   dashboard-mlt.yaml: |-
+#     {{ .Files.Get "grafana/provisioning/dashboards/mlt.yaml" | indent 4 }}
+#  

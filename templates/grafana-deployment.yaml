@@ -50,7 +50,17 @@
 #         - name: grafana-claim0
 #           persistentVolumeClaim:
 #             claimName: grafana-claim0
+              # configMap:
+              #   name: grafana-conf-file
+              #   items:
+              #     - key: dashboards.json
+              #       # path: dashboards.json
 #         - name: grafana-claim1
 #           persistentVolumeClaim:
 #             claimName: grafana-claim1
+              # configMap:
+              #   name: grfana-conf-file
+              #   items:
+              #     - key: datasources.yaml
+              #       # path: datasources.yaml
 # status: {}
