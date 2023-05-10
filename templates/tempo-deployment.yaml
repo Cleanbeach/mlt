@@ -38,11 +38,13 @@
 #             - containerPort: 14250
 #           resources: {}
 #           volumeMounts:
-#             - mountPath: /etc/tempo.yaml
+#             - mountPath: /etc/
 #               name: tempo-claim0
 #       restartPolicy: Always
 #       volumes:
 #         - name: tempo-claim0
 #           persistentVolumeClaim:
 #             claimName: tempo-claim0
+#           configMap:
+#              name: tempo-config-file
 # status: {}

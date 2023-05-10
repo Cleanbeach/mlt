@@ -1,0 +1,10 @@
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: otel-conf-file
+#   lables: 
+#     app: mimir
+# data:
+#   otel.yaml: |- 
+#     {{ .Files.Get "otel/otel.yaml" | indent 4 }} 
+#    #{{ (.Files.Glob "mimir/mimir.yaml").AsConfig | indent 2 }}

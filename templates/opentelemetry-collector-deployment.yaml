@@ -37,11 +37,13 @@
 #             - containerPort: 55679
 #           resources: {}
 #           volumeMounts:
-#             - mountPath: /etc/otel-collector-config.yml
+#             - mountPath: /etc/
 #               name: opentelemetry-collector-claim0
 #       restartPolicy: Always
 #       volumes:
 #         - name: opentelemetry-collector-claim0
 #           persistentVolumeClaim:
 #             claimName: opentelemetry-collector-claim0
+#           configMap:
+#              name: opentelemetry-collector-config-file
 # status: {}
